@@ -2,9 +2,257 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>JM-Soft</title>
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        document.documentElement.className = "js";
+        var supportsCssVars = function () {
+            var e, t = document.createElement("style");
+            return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
+        };
+        supportsCssVars() || alert("Please view this in a modern browser that supports CSS Variables.");
+    </script>
 </head>
-<body>
+<body class="loading">
+<main>
+    <div data-scroll>
+        <header>
+            <div class="logo"></div>
+            <ul class="menu">
+                <li><a href="">company</a></li>
+                <li><a href="">solution</a></li>
+                <li><a href="">service</a></li>
+                <li><a href="">support</a></li>
+            </ul>
+            <ul class="language">
+                <li><a href="" class="active">kor</a></li>
+                <li><a href="">eng</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <section id="slider">
+                <div class="image-slider">
+                    <div class="slide slide1"></div>
+                    <div class="slide slide2"></div>
+                    <div class="slide slide3"></div>
+                    <div class="slide slide4"></div>
+                    <div class="slide slide5"></div>
+                    <div class="slide slide6"></div>
+                </div>
+            </section>
+            <section id="business-area">
+                <h1>business area</h1>
+                <div class="cards">
+                    <div class="card">
+                        <div class="title">Smart<br/>IIoT</div>
+                        <ul>
+                            <li>Industrial IoT System</li>
+                            <li>EQP/MES Data Integration</li>
+                            <li>Big Data Messaging Middleware</li>
+                        </ul>
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                <path d="M9 3L7.94 4.06l4.19 4.19H3v1.5h9.13l-4.19 4.19L9 15l6-6z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="card">
+                        <div class="title">Automation Smart Factory</div>
+                        <ul>
+                            <li>RTMS (Real Time Monitoring System)</li>
+                            <li>DMS (Defect Management System)</li>
+                            <li>SI (System Integration)</li>
+                            <li>SM (System Management)</li>
+                            <li>CIM/GEM</li>
+                            <li>EQP/PLC Control</li>
+                        </ul>
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                <path d="M9 3L7.94 4.06l4.19 4.19H3v1.5h9.13l-4.19 4.19L9 15l6-6z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="card">
+                        <div class="title">Remote<br/>Control</div>
+                        <ul>
+                            <li>Remote Control System<br/>(S/W, H/W)</li>
+                            <li>Process Control System<br/>(PC, HMI, CCTV, I/O Unit)</li>
+                        </ul>
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                <path d="M9 3L7.94 4.06l4.19 4.19H3v1.5h9.13l-4.19 4.19L9 15l6-6z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="card">
+                        <div class="title">Digital Transformation</div>
+                        <ul>
+                            <li>A.I. Machine Learning</li>
+                            <li>A.I. Deep Learning</li>
+                            <li>RSS (Remote Support System)</li>
+                            <li>System Parts</li>
+                            <li>- H/W : HP, Dell, Renovo, Etc.</li>
+                            <li>- S/W : Management Service Supply & Maintenance</li>
+                        </ul>
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                <path d="M9 3L7.94 4.06l4.19 4.19H3v1.5h9.13l-4.19 4.19L9 15l6-6z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section id="flagship-solutions">
+                <h1>flagship solutions</h1>
+                <div class="solution">
+                    <dl>
+                        <dt>smart iiot solution</dt>
+                        <dd>현재 수집되고 있지 않은 PLC, CIM, File 데이터 수집을 위한 설비 개조, 변경 없이 데이터를 수집하여 분석에 필요한 Big-Data 구축과 Rule을 통한
+                            설비 제어가 가능한 제조공정에 특화된 IoT System입니다.
+                        </dd>
+                    </dl>
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                            <path d="M9 3L7.94 4.06l4.19 4.19H3v1.5h9.13l-4.19 4.19L9 15l6-6z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="solution">
+                    <dl>
+                        <dt>RTMS / Pcap(Packet Capture) Service</dt>
+                        <dd>㈜제이엠소프트는 10여년간 삼성디스플레이㈜의 각 생산 라인에 특화된 공정별 통합 모니터링 시스템 구축 및 유지보수를 진행했던 개발 인력들의 경험을 바탕으로 Line
+                            Engineering System 분야 및 대용량 고속처리 DB에 많은 노하우와 기술을 축적/보유하고 있습니다.
+                        </dd>
+                    </dl>
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                            <path d="M9 3L7.94 4.06l4.19 4.19H3v1.5h9.13l-4.19 4.19L9 15l6-6z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="solution">
+                    <dl>
+                        <dt>Remote Control System</dt>
+                        <dd>RCS는 원격지에 있는 다양한 원격 장치를 원격으로 통합 관리, 모니터링 및 제어가 가능한 솔루션입니다. 원격지에 있는 Desktop PC, Server, IP
+                            Camera (CCTV), HMI, IoT Device, VNC Server, PC기반의 산업장비, 키오스크와 같은 무인 PC등을 관리자 PC에서 통합 관리,
+                            모니터링, 원격 제어를 합니다.
+                        </dd>
+                    </dl>
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                            <path d="M9 3L7.94 4.06l4.19 4.19H3v1.5h9.13l-4.19 4.19L9 15l6-6z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="solution">
+                    <dl>
+                        <dt>A.I Machine & Deep Learning (아르고스)</dt>
+                        <dd>머신러닝을 기반으로 데이터전처리, 데이터분석, 변수선정, 피쳐셀렉션, 인공지능모델생성, 모델평가, 모델시뮬레이션, 모델테스트결과를 통한 기계학습, 강화학습, 가상계측
+                            기반의 MES, APC, R2R 솔루션입니다.
+                        </dd>
+                    </dl>
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                            <path d="M9 3L7.94 4.06l4.19 4.19H3v1.5h9.13l-4.19 4.19L9 15l6-6z"/>
+                        </svg>
+                    </button>
+                </div>
+            </section>
+            <section id="service">
+                <div>
+                    <h1>service</h1>
+                    <div>
+                        <div class="system-integration">
+                            <div>
+                                <h2>SI(System Integration)</h2>
+                                <p>고객의 다양한 전산시스템 구축 요구에 따라 컨설팅에서부터 시스템설계, 개발, 구축, 관리, 분석, 교육, 유지보수 공정에 이르기까지 일련의 정보서비스를 고객의
+                                    경영환경에 맞게
+                                    유기적으로 통합 구축하는 서비스 사업입니다.</p>
+                                <ul>
+                                    <li>전문 컨설턴트에 의한 시스템 설계로 안정된 시스템 설계 및 구현을 통해 원활한 서비스 지원</li>
+                                    <li>-기타 SI개발 솔루션을 적용한 시스템의 유연성 부여 및 통합 관리 시스템 지원</li>
+                                    <li>-설계 단계부터 구현 단계까지의 토털 컨설팅 서비스를 통한 유지보수의 융통성부여 및 업그레이드 용이</li>
+                                    <li>-위탁, 공동개발 등 다양한 개발 방식지원을 통한 단가감소 효과 유발</li>
+                                </ul>
 
+                            </div>
+                        </div>
+                        <div class="system-consulting">
+                            <div>
+                                <h2>System Consulting</h2>
+                                <p>고객의 전산시스템 최적화를 위해 가장 적합한 시스템 전산장비를 선정하여 조달 및 발주하는 서비스로 대용량 처리를 위한 서버와 중소형 서버에 이르기까지 최적의 시스템을
+                                    구성하기
+                                    위한 컨설팅 및 납품 서비스를 통해 보다 나은 안정적인 전산 시스템을 이루도록 지원합니다.</p>
+                                <ul>
+                                    <li>-S/W 성능 및 운영 범주에 가장 적합한 전산장비 도입으로 최적화 전산시스템 성능 발휘</li>
+                                    <li>-하드웨어 전문가에 의한 일체의 전산장비 및 각종 기본장치에 대한 설치와 성능 테스트를 통해 불필요한 시간단축 및 가장 안정적인 시스템 설비제공</li>
+                                    <li>-전산설비의 안정적 운영을 위한 하드웨어 A/S 서비스를 통해 장애 발생시 절대적 복구 시간 단축</li>
+                                    <li>-향후 업그레이드 조치 시 기존 전산설비 분석으로 대체 전산설비 도입</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="customer">
+
+            </section>
+
+            <section class="sitemap">
+                <h1>sitemap</h1>
+                <div>
+                    <h3>company</h3>
+                    <ul>
+                        <li>Challenge & Passion</li>
+                        <li>CEO Greeting</li>
+                        <li>Organization</li>
+                        <li>Business Area</li>
+                        <li>Client</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>solution</h3>
+                    <ul>
+                        <li>RTMS Solution</li>
+                        <li>RCS/ROS Solution</li>
+                        <li>Smart IIoT Solution</li>
+                        <li>A.I. Machine Learning Signe-S Solution</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>service</h3>
+                    <ul>
+                        <li>SI(System Integration)</li>
+                        <li>System Consulting</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>support</h3>
+                </div>
+
+            </section>
+        </div>
+        <footer>
+            <div class="information">
+                <div>
+                    <address>경기도 용인시 수지구 광교중앙로 338, C동 802호(상현동, 광교우미뉴브) ㈜제이엠소프트</address>
+                    <ul>
+                        <li>tel: 031-308-5865</li>
+                        <li>fax: 031-624-5969</li>
+                        <li>e-mail: jmahn@jm-soft.co.kr</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">Copyright © JM-SOFT Co., Ltd. All Rights Reserved.</div>
+        </footer>
+    </div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js'></script>
+<script src="assets/js/distortion.js"></script>
+<script src="assets/js/script.js"></script>
 </body>
 </html>

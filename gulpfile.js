@@ -13,7 +13,7 @@ const PATH = {
     HTML: './src',
     ASSETS: {
         FONTS: './src/assets/fonts',
-        STYLE: './src/assets/css',
+        STYLE: './src/assets/scss',
         IMAGES: './src/assets/images',
         SCRIPT: './src/assets/js',
         LIB: './src/assets/lib'
@@ -44,7 +44,7 @@ gulp.task('fonts', () => {
 })
 
 gulp.task('images', () => {
-    return gulp.src(PATH.ASSETS.IMAGES + '/*.*')
+    return gulp.src(PATH.ASSETS.IMAGES + '/**/*.*')
         .pipe(gulp.dest(DEST_PATH.ASSETS.IMAGES))
         .pipe(browserSync.reload({stream: true}))
 })
