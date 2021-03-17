@@ -115,6 +115,7 @@ gulp.task('watch', () => {
     gulp.watch(PATH.HTML + '/**/*.html', gulp.series(['html']))
     gulp.watch(PATH.ASSETS.STYLE + '/**/*.scss', gulp.series(['scss']))
     gulp.watch(PATH.ASSETS.SCRIPT + '/**/*.js', gulp.series(['script']))
+    gulp.watch(PATH.ASSETS.SCRIPT + '/**/*.*', gulp.series(['images']))
 })
 
 

@@ -1,11 +1,16 @@
 @font-face {
-  font-family: 'Poppins-Light';
-  src: url('../fonts/Poppins-Light.ttf');
+  font-family: 'Poppins-Regular';
+  src: url('../fonts/Poppins-Regular.ttf');
 }
 
 @font-face {
   font-family: 'Poppins-Semibold';
   src: url('../fonts/Poppins-Semibold.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat-ExtraLight';
+  src: url('../fonts/Montserrat-ExtraLight.ttf');
 }
 
 @font-face {
@@ -19,14 +24,25 @@
 }
 
 @font-face {
-  font-family: 'NanumSquare';
-  font-weight: 300;
+  font-family: 'Libre Baskerville';
+  src: url('../fonts/LibreBaskerville-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'NanumSquare-Regular';
   src: url(../fonts/NanumSquareR.otf),
   url(../fonts/NanumSquareR.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'NanumSquare';
+  font-weight: 300;
+  src: url(../fonts/NanumSquareL.otf),
+  url(../fonts/NanumSquareL.ttf) format('truetype');
+}
 
-$primary-color: #07babd;
+
+$primary-color: #2f2586;
 $secondary-color: #3b9cff;
 $dark-primary-color: #27292d;
 $dark-secondary-color: #373a46;
@@ -38,7 +54,7 @@ body {
   width: 100%;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
-  font: 14px/1.5 'Poppins', 'NanumSquare';
+  font: 15px/1.5 'Poppins-Regular', 'NanumSquare-Regular';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -80,7 +96,7 @@ svg {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #dce2ec;
+  background: #080c2b;
 }
 
 .js .loading::after {
@@ -91,7 +107,7 @@ svg {
   margin: -30px 0 0 -30px;
   border-radius: 50%;
   opacity: 0.4;
-  background: #444;
+  background: $primary-color;
   animation: loaderAnim 0.7s linear infinite alternate forwards;
 
 }
@@ -104,14 +120,17 @@ svg {
 }
 
 a {
+  font-family: 'Poppins-Regular', sans-serif;
   text-decoration: none;
   color: #444;
   outline: none;
+  transition: .4s;
 }
 
 a:hover,
-a:focus {
-  color: #555;
+a:focus,
+a.active {
+  color: $secondary-color;
   outline: none;
   text-decoration: none;
 }
@@ -223,7 +242,6 @@ input:focus, select:focus, button:focus {
 label {
   font-weight: normal; /* bootstrap*/
   margin-bottom: 0; /* bootstrap*/
-  color: slategray;
 }
 
 button {
@@ -266,7 +284,7 @@ button {
 textarea {
   background-color: white;
   border: none;
-  border-radius: .5rem;
+  border-radius: .25rem;
   padding: .5rem;
   resize: none;
 
@@ -336,9 +354,6 @@ aside {
 .content {
   opacity: 0;
   flex: 1 1 auto;
-  align-items: center;
-  overflow-x: hidden;
-  overflow-y: auto;
   display: flex;
   flex-direction: column;
   animation: fadeInOpacity .4s forwards;
@@ -382,12 +397,13 @@ aside {
 
 .wrapper {
   flex: 1 1 auto;
-  padding: 2rem;
   margin: 0 auto;
-  max-width: 1200px;
+  width: 1200px;
+  max-width: 1600px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  position: relative;
 }
 
 .input-container {
@@ -500,14 +516,14 @@ aside {
     position: absolute;
     opacity: 0;
 
-    &:checked + label {
-      color: #36299f;
+    &:checked + label::before {
+      background: $secondary-color;
+      border-color: $secondary-color
     }
   }
 
   label {
     flex: 1 1 auto !important;
-    color: #AAA;
     display: flex;
     align-items: center;
     position: relative;
@@ -520,9 +536,9 @@ aside {
       transition: .2s;
       content: '';
       margin-right: 3px;
-      width: 15px;
-      height: 15px;
-      border: 1px solid #EEE;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #CCC;
       background-color: white;
     }
   }
@@ -533,9 +549,9 @@ aside {
   width: 10px;
   height: 6px;
   position: absolute;
-  top: 3px;
+  top: 6px;
   left: 3px;
-  border: 2px solid black;
+  border: 2px solid white;
   border-top: none;
   border-right: none;
   background: transparent;
@@ -604,6 +620,47 @@ input[type="radio"] + label:empty:before {
 }
 
 
+/* Input File */
+
+[type="file"] {
+  height: 0.1px; width: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+
+  + label {
+    background-color: #EEE;
+    cursor: pointer;
+    overflow: hidden;
+    padding: .5rem 1rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: .4s;
+    border-radius: .25rem;
+
+    svg {
+      transition: .4s;
+    }
+
+    &:hover {
+      background-color: $secondary-color;
+      color: white;
+
+      svg {
+        fill: white
+      }
+    }
+  }
+
+  &:focus + label {
+    background-color: $secondary-color;
+    outline: 1px dotted #000;
+  }
+}
+
+
+
 /*selectbox*/
 .selectbox {
   position: relative;
@@ -653,6 +710,40 @@ input[type="radio"] + label:empty:before {
   }
 }
 
+/* Tab Menu */
+.tabs {
+  display: flex;
+
+  li {
+
+    transition: .4s;
+    cursor: pointer;
+
+    &:hover,
+    &.active {
+      color: $secondary-color
+    }
+  }
+}
+
+.tab-content > div {
+  display: none;
+
+  &.active {
+    flex-direction: column;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+
+    + p {
+       text-align: center;
+    }
+  }
+}
+
 
 /*table*/
 .table {
@@ -679,8 +770,6 @@ input[type="radio"] + label:empty:before {
   align-items: center;
   text-align: center;
   padding: .5rem 0;
-  background: white;
-  border-radius: .5rem;
   position: relative;
   animation: fadeInOpacity .8s forwards;
 }
@@ -700,7 +789,7 @@ input[type="radio"] + label:empty:before {
 }
 
 .table .th {
-  font: 13px/1.2 'Comfortaa', 'Nanumsquare';
+  font: 13px/1.2 'Poppins-Regular', 'Nanumsquare';
   margin: .5rem auto .2rem !important;
   color: slategray !important;
   word-break: keep-all;

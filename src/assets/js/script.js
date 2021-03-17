@@ -71,6 +71,7 @@ class SmoothScroll {
         requestAnimationFrame(() => this.render());
     }
 
+
     update() {
         // sets the initial value (no interpolation) - translate the scroll value
         for (const key in this.renderedStyles) {
@@ -101,6 +102,7 @@ class SmoothScroll {
     initEvents() {
         // on resize reset the body's height
         window.addEventListener('resize', () => this.setSize());
+        window.addEventListener('click', () => this.setSize());
     }
 
     render() {
@@ -162,37 +164,98 @@ preloadImages().then(() => {
 
 
 /* =====================================================
+   Scroll Menu
+   ===================================================== */
+let header;
+let logo = document.querySelector('header .logo');
+let hamburgerMenu = document.querySelectorAll('.hamburger-menu path')
+
+function init() {
+    header = document.querySelector("header");
+    document.addEventListener("scroll", scrollMenu, false);
+}
+
+function scrollMenu() {
+    if (document.documentElement.scrollTop > 50) {
+        header.classList.add("scroll");
+    } else {
+        header.classList.remove("scroll");
+    }
+}
+
+document.addEventListener("DOMContentLoaded", init, false);
+
+
+/* =====================================================
    Menu Trigger & Image/Text Reveal Effects
    ===================================================== */
-$(function () {
-    var fadeIn = $('section > *').toArray();
+const sections = document.querySelectorAll('section')
+const footer = document.querySelector('footer')
 
-    $(window).scroll(function () {
-        fadeIn.forEach(function (item) {
-            if ($(this).scrollTop() >= $(item).offset().top - 400) {
-                $(item).css('opacity', '1')
-            }
-        });
-    });
-
-    fadeIn.forEach(function (item) {
-        if ($(this).scrollTop() >= $(item).offset().top - 400) {
-            $(item).css('opacity', '1')
+document.addEventListener('scroll', () => {
+    sections.forEach(section => {
+        if (document.documentElement.scrollTop >= section.offsetTop - 500) {
+            section.style.opacity = '1'
         }
-    });
 
+    })
 
-    $(window).scroll(function () {
-        if ($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
-            var contactChild = document.querySelector('footer > *');
-            contactChild.style.opacity = "1"
-        }
-    });
-
-    const contactTitle = document.querySelector("footer h3")
-    const contactContent = document.querySelector("footer ul")
-
-    if (contactTitle.style.opacity = "1") {
-        contactContent.style.opacity = "1"
+    if (document.documentElement.scrollTop >= footer.offsetTop - 500) {
+        footer.style.opacity = '1'
     }
-});
+
+})
+sections.forEach(section => {
+    if (document.documentElement.scrollTop >= section.offsetTop - 500) {
+        section.style.opacity = '1'
+    }
+
+})
+
+window.addEventListener('scroll', () => {
+    let scrollLocation = document.documentElement.scrollTop; // 현재 스크롤바 위치
+    let windowHeight = window.innerHeight; // 스크린 창
+    let fullHeight = document.body.scrollHeight; //  margin 값은 포함 x
+
+    const media = window.matchMedia('(min-width: 768px)')
+
+    if (matchMedia('(min-width: 768px)').matches) {
+        if (scrollLocation + windowHeight >= fullHeight - 100) {
+            let footer = document.querySelector('footer')
+            footer.style.opacity = "1"
+        }
+    }
+})
+
+
+/* =====================================================
+   Tab Menu
+   ===================================================== */
+const tabMenus = document.querySelectorAll('.tabs li');
+const tabContents = document.querySelectorAll('.tab-content > div');
+
+const activeSection = (e) => {
+    e.stopPropagation();
+
+    let menuIndex = [...tabMenus].indexOf(e.target);
+
+    tabMenus.forEach(menu => {
+        [...tabMenus].indexOf(menu) === menuIndex
+            ? menu.classList.add('active')
+            : menu.classList.remove('active')
+    });
+
+    tabContents.forEach(content => {
+        [...tabContents].indexOf(content) === menuIndex
+            ? content.classList.add('active')
+            : content.classList.remove('active')
+    });
+}
+
+if (tabMenus) {
+    tabMenus.forEach(menu => {
+        [...tabMenus][0].classList.add('active');
+        [...tabContents][0].classList.add('active');
+        menu.addEventListener('click', activeSection)
+    })
+}
