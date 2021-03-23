@@ -60,14 +60,140 @@ var getPageYScroll = function getPageYScroll() {
   return docScroll = window.pageYOffset || document.documentElement.scrollTop;
 };
 
-window.addEventListener('scroll', getPageYScroll);
+window.addEventListener('scroll', getPageYScroll); // Item
+
+var Item = /*#__PURE__*/function () {
+  function Item(el) {
+    var _this = this;
+
+    _classCallCheck(this, Item);
+
+    // the .item element
+    this.DOM = {
+      el: el
+    }; // the inner image
+
+    this.DOM.image = this.DOM.el.querySelector('.image');
+    this.renderedStyles = {
+      // here we define which property will change as we scroll the page and the item is inside the viewport
+      // in this case we will be:
+      // - scaling the inner image
+      // - translating the item's title
+      // we interpolate between the previous and current value to achieve a smooth effect
+      imageScale: {
+        // interpolated value
+        previous: 0,
+        // current value
+        current: 0,
+        // amount to interpolate
+        ease: 0.1,
+        // current value setter
+        setValue: function setValue() {
+          var toValue = 1.25;
+          var fromValue = 1;
+          var val = MathUtils.map(_this.props.top - docScroll, winsize.height, -1 * _this.props.height, fromValue, toValue);
+          return Math.max(Math.min(val, toValue), fromValue);
+        }
+      },
+      titleTranslationY: {
+        previous: 0,
+        current: 0,
+        ease: 0.1,
+        fromValue: Number(MathUtils.getRandomFloat(30, 400)),
+        setValue: function setValue() {
+          var fromValue = _this.renderedStyles.titleTranslationY.fromValue;
+          var toValue = -1 * fromValue;
+          var val = MathUtils.map(_this.props.top - docScroll, winsize.height, -1 * _this.props.height, fromValue, toValue);
+          return fromValue < 0 ? Math.min(Math.max(val, fromValue), toValue) : Math.max(Math.min(val, fromValue), toValue);
+        }
+      }
+    }; // gets the item's height and top (relative to the document)
+
+    this.getSize(); // set the initial values
+
+    this.update(); // use the IntersectionObserver API to check when the element is inside the viewport
+    // only then the element styles will be updated
+
+    this.observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        return _this.isVisible = entry.intersectionRatio > 0;
+      });
+    });
+    this.observer.observe(this.DOM.el); // init/bind events
+
+    this.initEvents();
+  }
+
+  _createClass(Item, [{
+    key: "update",
+    value: function update() {
+      // sets the initial value (no interpolation)
+      for (var key in this.renderedStyles) {
+        this.renderedStyles[key].current = this.renderedStyles[key].previous = this.renderedStyles[key].setValue();
+      } // apply changes/styles
+
+
+      this.layout();
+    }
+  }, {
+    key: "getSize",
+    value: function getSize() {
+      var rect = this.DOM.el.getBoundingClientRect();
+      this.props = {
+        // item's height
+        height: rect.height,
+        // offset top relative to the document
+        top: docScroll + rect.top
+      };
+    }
+  }, {
+    key: "initEvents",
+    value: function initEvents() {
+      var _this2 = this;
+
+      window.addEventListener('resize', function () {
+        return _this2.resize();
+      });
+    }
+  }, {
+    key: "resize",
+    value: function resize() {
+      // gets the item's height and top (relative to the document)
+      this.getSize(); // on resize reset sizes and update styles
+
+      this.update();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      // update the current and interpolated values
+      for (var key in this.renderedStyles) {
+        this.renderedStyles[key].current = this.renderedStyles[key].setValue();
+        this.renderedStyles[key].previous = MathUtils.lerp(this.renderedStyles[key].previous, this.renderedStyles[key].current, this.renderedStyles[key].ease);
+      } // and apply changes
+
+
+      this.layout();
+    }
+  }, {
+    key: "layout",
+    value: function layout() {
+      console.log(this.DOM); // scale the image
+
+      this.DOM.image.style.transform = "scale3d(".concat(this.renderedStyles.imageScale.previous, ",").concat(this.renderedStyles.imageScale.previous, ",1)"); // translate the title
+    }
+  }]);
+
+  return Item;
+}();
 /* =====================================================
    SmoothScroll
    ===================================================== */
 
+
 var SmoothScroll = /*#__PURE__*/function () {
   function SmoothScroll() {
-    var _this = this;
+    var _this3 = this;
 
     _classCallCheck(this, SmoothScroll);
 
@@ -82,8 +208,8 @@ var SmoothScroll = /*#__PURE__*/function () {
     this.items = [];
     this.DOM.content = this.DOM.main.querySelector('.content');
 
-    _toConsumableArray(this.DOM.content.querySelectorAll('.content__item')).forEach(function (item) {
-      return _this.items.push(new Item(item));
+    _toConsumableArray(this.DOM.content.querySelectorAll('.image-wrapper')).forEach(function (item) {
+      return _this3.items.push(new Item(item));
     }); // here we define which property will change as we scroll the page
     // in this case we will be translating on the y-axis
     // we interpolate between the previous and current value to achieve the smooth scrolling effect
@@ -114,7 +240,7 @@ var SmoothScroll = /*#__PURE__*/function () {
     this.initEvents(); // start the render loop
 
     requestAnimationFrame(function () {
-      return _this.render();
+      return _this3.render();
     });
   }
 
@@ -153,20 +279,20 @@ var SmoothScroll = /*#__PURE__*/function () {
   }, {
     key: "initEvents",
     value: function initEvents() {
-      var _this2 = this;
+      var _this4 = this;
 
       // on resize reset the body's height
       window.addEventListener('resize', function () {
-        return _this2.setSize();
+        return _this4.setSize();
       });
       window.addEventListener('click', function () {
-        return _this2.setSize();
+        return _this4.setSize();
       });
     }
   }, {
     key: "render",
     value: function render() {
-      var _this3 = this;
+      var _this5 = this;
 
       // Get scrolling speed
       // Update lastScroll
@@ -209,7 +335,7 @@ var SmoothScroll = /*#__PURE__*/function () {
       }
 
       requestAnimationFrame(function () {
-        return _this3.render();
+        return _this5.render();
       });
     }
   }]);
@@ -266,44 +392,49 @@ document.addEventListener("DOMContentLoaded", init, false);
    Menu Trigger & Image/Text Reveal Effects
    ===================================================== */
 
+var main = document.querySelector('.main');
 var sections = document.querySelectorAll('section');
 var footer = document.querySelector('footer');
-document.addEventListener('scroll', function () {
+
+if (main) {
+  document.addEventListener('scroll', function () {
+    sections.forEach(function (section) {
+      if (document.documentElement.scrollTop >= section.offsetTop - 600) {
+        section.style.opacity = '1';
+      }
+    });
+
+    if (document.documentElement.scrollTop >= footer.offsetTop - 600) {
+      footer.style.opacity = '1';
+    }
+  });
   sections.forEach(function (section) {
-    if (document.documentElement.scrollTop >= section.offsetTop - 500) {
+    if (document.documentElement.scrollTop >= section.offsetTop - 600) {
       section.style.opacity = '1';
     }
   });
+  window.addEventListener('scroll', function () {
+    var scrollLocation = document.documentElement.scrollTop; // 현재 스크롤바 위치
 
-  if (document.documentElement.scrollTop >= footer.offsetTop - 500) {
-    footer.style.opacity = '1';
-  }
-});
-sections.forEach(function (section) {
-  if (document.documentElement.scrollTop >= section.offsetTop - 500) {
-    section.style.opacity = '1';
-  }
-});
-window.addEventListener('scroll', function () {
-  var scrollLocation = document.documentElement.scrollTop; // 현재 스크롤바 위치
+    var windowHeight = window.innerHeight; // 스크린 창
 
-  var windowHeight = window.innerHeight; // 스크린 창
+    var fullHeight = document.body.scrollHeight; //  margin 값은 포함 x
 
-  var fullHeight = document.body.scrollHeight; //  margin 값은 포함 x
+    var media = window.matchMedia('(min-width: 768px)');
 
-  var media = window.matchMedia('(min-width: 768px)');
+    if (matchMedia('(min-width: 768px)').matches) {
+      if (scrollLocation + windowHeight >= fullHeight - 100) {
+        var _footer = document.querySelector('footer');
 
-  if (matchMedia('(min-width: 768px)').matches) {
-    if (scrollLocation + windowHeight >= fullHeight - 100) {
-      var _footer = document.querySelector('footer');
-
-      _footer.style.opacity = "1";
+        _footer.style.opacity = "1";
+      }
     }
-  }
-});
+  });
+}
 /* =====================================================
    Tab Menu
    ===================================================== */
+
 
 var tabMenus = document.querySelectorAll('.tabs li');
 var tabContents = document.querySelectorAll('.tab-content > div');
