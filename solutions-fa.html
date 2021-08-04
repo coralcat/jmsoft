@@ -1,313 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>JM-Soft</title>
-    <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/slick-theme.css">
-    <script>
-        document.documentElement.className = "js";
-        var supportsCssVars = function () {
-            var e, t = document.createElement("style");
-            return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
-        };
-        supportsCssVars() || alert("Please view this in a modern browser that supports CSS Variables.");
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="(주)제이엠소프트 JM-SOFT">
+  <meta property="og:description"
+    content="㈜제이엠소프트는 쉼 없는 정열로 일에 도전하고 목표를 성취하려는 모습, 끊임없이 새로운 것을 개발하고 새로운 방법을 모색하는 열정으로 고객과의 거리를 좁혀나가고 있습니다. 또한 구성원간의 신뢰와 믿음을 통한 투명경영으로 고객의 Needs를 실현하기 위해 항상 최선을 다하고 있습니다.">
+  <title>(주)제이엠소프트</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <script type="text/javascript" src="assets/js/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="assets/js/slick.min.js"></script>
+  <script src='assets/js/imagesloaded.pkgd.min.js'></script>
+  <script>
+    document.documentElement.className = "js";
+    var supportsCssVars = function () {
+      var e, t = document.createElement("style");
+      return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
+    };
+    supportsCssVars() || alert("Please view this in a modern browser that supports CSS Variables.");
+  </script>
 </head>
+
 <body class="loading">
-<main class="solutions smart-factory-automation sub">
-    <header onclick="this.classList.toggle('active')">
-        <div>
-            <a href="index.html">
-                <div class="logo"></div>
-            </a>
-            <div class="hamburger-menu">
-                <svg viewBox="0 0 100 100" width="80">
-                    <path d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40"/>
-                    <path d="m 30,50 h 40"/>
-                    <path d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40"/>
-                </svg>
-            </div>
-        </div>
-        <ul class="menu">
-            <li><a href="about.html">about</a></li>
-            <li><a href="solutions-iiot.html" class="active">solution</a></li>
-            <li><a href="services.html">services</a></li>
-            <li><a href="support.html">support</a></li>
-        </ul>
-        <ul class="language">
-            <li><a href="" class="active">kr</a></li>
-            <li><a href="">en</a></li>
-        </ul>
-    </header>
-    <div class="content">
-        <div class="title">
-            <h1 class="wrapper">solutions</h1>
-        </div>
-        <div class="wrapper">
-            <ul class="sub-menu">
-                <li><a href="solutions-iiot.html">Smart IIoT</a></li>
-                <li><a href="solutions-rcs.html">Remote Control System</a></li>
-                <li class="active"><a href="solutions-fa.html">Smart Factory Automation</a></li>
-                <li><a href="solutions-dt.html">Digital Transformation</a></li>
-            </ul>
-            <ul class="tabs">
-                <li>RTMS</li>
-                <li>DMS</li>
-                <li>CIM/GEM</li>
-            </ul>
-        </div>
-        <div class="tab-content wrapper">
-            <div class="rtms">
-                <div class="sub-title">
-                    <h2>RTMS <small>Realtime Monitoring System</small></h2>
-                    <p>RTMS는 설비 및 공정 상태를 실시간으로 모니터링 하면서 제로 또는 낮은 대기 시간으로 지속적으로 업데이트되는 정보 스트리밍을 제공합니다. 관리자가 심각한 문제를 즉시 식별
-                        할 수있는 관련 및 현재 데이터의 지연 시간이 짧은 연속 스트림을 제공하여 사전에 대비하며, 데이터를 추적함으로써 조직은 추세와 성과를 공개하고 예측할 수 있습니다.
-                    </p>
-                </div>
-                <section>
-                    <img src="assets/images/solutions/rtms/rtms.png" alt="">
-                </section>
-                <section class="advantages">
-                    <ul>
-                        <li><h4>역할</h4></li>
-                        <li>설비 Status & Alarm 정보</li>
-                        <li>설비/작업자/공정 별 불량 현황</li>
-                        <li>공정간 데이터 연계성 분석</li>
-                        <li>실시간 분석 데이터 제공</li>
-                        <li>Bottleneck 분석 자료 제공</li>
-                        <li>설비 가동률 제공</li>
-                    </ul>
-                    <ul>
-                        <li><h4>기대효과</h4></li>
-                        <li>지속적인 설비 관리로 설비 신뢰성 확보</li>
-                        <li>최저 불량률 실현</li>
-                        <li>데이터 수집으로 인한 불필요한 인력 양산 방지</li>
-                        <li>데이터 수집 시간 최소화</li>
-                        <li>장애 및 불량에 대한 신속한 분석</li>
-                        <li>데이터 처리 간소화</li>
-                    </ul>
-                </section>
-                <section>
-                    <div class="rtms-slider">
-                        <div>
-                            <img src="assets/images/solutions/rtms/01.png" alt="">
-                            <span>EQP Monitoring</span>
-                        </div>
-                        <div>
-                            <img src="assets/images/solutions/rtms/02.png" alt="">
-                            <span>Yield Monitoring</span>
-                        </div>
-                        <div>
-                            <img src="assets/images/solutions/rtms/03.png" alt="">
-                            <span>AOI Significant Difference Trend</span>
-                        </div>
-                        <div>
-                            <img src="assets/images/solutions/rtms/04.png" alt="">
-                            <span>Repair Success Rate Trend</span>
-                        </div>
-                        <div>
-                            <img src="assets/images/solutions/rtms/05.png" alt="">
-                            <span>EQP Tact Time Report</span>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="dms">
-                <div class="sub-title">
-                    <h2>DMS <small>Defect Management System</small></h2>
-                    <p>
-                        비전 검사 설비에서 검출한 불량에 대해서 별도의 설비 없이 가상으로 설비의 데이터와 이미지를 사용하여 불량을 선 판정하는 시스템으로 과검출 된
-                        Defect을 DRS에서 작업자가 직접 판정하고, 검사 대상 Defect을 선별하여 비전 검사 설비의 Load를 줄여주고 물류 성능을 향상합니다. 별도의 설비가 없으므로,
-                        실물이 움직이지 않고 판정하므로 빠른 판정이 가능합니다.
-                    </p>
-                </div>
-                <section class="advantages">
-                    <ul>
-                        <li>빠른 판정으로 물류 Tact time 최소화</li>
-                        <li>다양한 불량 정보 수집, 가공 하여 분석 및 통계데이터 제공</li>
-                        <li>불량 검출력 향상 조치 예방에 도움</li>
-                        <li>직관적 UI 구성으로 사용자 편의성 증대</li>
-                        <li>상세 불량정보 이미지로 조회 가능</li>
-                        <li>통계 데이터 Excel 파일 저장 다양한 분석 활용 용의</li>
-                    </ul>
-                    <ul>
-                        <li>Smart-IT Server의 학습Data를 활용하여 기존 DRS시스템 을 고도화 하여 Repair설비의 Load를 줄여주고 물류 성능을 향상시킴</li>
-                        <li>안정되고  저비용 확장 성이 보장된 무정지 “DMS” 시스템 구축</li>
-                        <li>Smart-IT Server와 연동할 수 있는 유연한 인터페이스제공</li>
-                        <li>검증된 DRS시스템 제공</li>
-                        <li>고객 작업환경에 맞는 UI제공</li>
-                    </ul>
-                </section>
-                <section class="interface">
-                    <h3>DMS와 Runner 서버 간의 Data Interface 구성</h3>
-                    <img src="assets/images/solutions/dms/dms.png" alt="">
-                </section>
-                <section class="process">
-                    <ul>
-                        <li>자동 판정 Process Alive/Dead Check (TCP/IP 통신 연결 상태 유무로 판단)</li>
-                        <li>자동 판정 Process 및 관리 Process 상태를 DMS Server 에 보고 (해당 Process 상태를 모니터링 하기 위한 용도)</li>
-                        <li>MES 에서 Image Download 및 저장</li>
-                        <li>Download 한 Image 경로를 자동판정 Process 에 전달</li>
-                        <li>자동 판정 완료 결과를 DRS Server 에 보고</li>
-                        <li>Download 한 Image 를 Data Server 에 Upload</li>
-                        <li>SAN Switch 사용으로 인한 Data 전송 안정성 확보</li>
-                    </ul>
-                </section>
-                <section>
-                    <h3>Smart BI Server</h3>
-                    <div class="dms-slider">
-                        <div>
-                            <img src="assets/images/solutions/dms/01.png" alt="">
-                        </div>
-                        <div>
-                            <img src="assets/images/solutions/dms/02.png" alt="">
-                        </div>
-                        <div>
-                            <img src="assets/images/solutions/dms/03.png" alt="">
-                        </div>
-                        <div>
-                            <img src="assets/images/solutions/dms/04.png" alt="">
-                        </div>
-                        <div>
-                            <img src="assets/images/solutions/dms/05.png" alt="">
-                        </div>
-                        <div>
-                            <img src="assets/images/solutions/dms/06.png" alt="">
-                        </div>
-                        <div>
-                            <img src="assets/images/solutions/dms/07.png" alt="">
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="cim">
-                <div class="sub-title">
-                    <h2>CIM & GEM</h2>
-                    <p>비전 검사 설비에서 검출한 불량에 대해서 별도의 설비 없이 가상으로 설비의 데이터와 이미지를 사용하여 불량을 선 판정하는 시스템</p>
-                </div>
+  <main>
+    
 
-            </div>
-        </div>
+
+<header onclick="this.classList.toggle('active')">
+  <div>
+    <a href="index.html">
+      <div class="logo"></div>
+    </a>
+    <div class="hamburger-menu">
+      <svg viewBox="0 0 100 100" width="80">
+        <path
+          d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+        <path d="m 30,50 h 40" />
+        <path
+          d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+      </svg>
     </div>
-    <footer>
-        <section class="sitemap wrapper">
-            <div>
-                <h3><a href="about.html">about</a></h3>
-                <ul>
-                    <li>Challenge & Passion</li>
-                    <li>CEO Greeting</li>
-                    <li>Organization</li>
-                    <li>Location</li>
-                </ul>
-            </div>
-            <div>
-                <h3><a href="solutions-iiot.html">solution</a></h3>
-                <ul>
-                    <li>Smart IIoT Solution</li>
-                    <li>Remote Control System</li>
-                    <li>Smart Factory Automation</li>
-                    <li>Digital Transformation</li>
-                </ul>
-            </div>
-            <div>
-                <h3><a href="services.html">services</a></h3>
-                <ul>
-                    <li>System Integration</li>
-                    <li>System Consulting</li>
-                </ul>
-            </div>
-            <div>
-                <h3><a href="support.html">support</a></h3>
-            </div>
-        </section>
-        <section class="information wrapper">
-            <div>
-                <address>경기도 용인시 수지구 광교중앙로 338, C동 802호(상현동, 광교우미뉴브) ㈜제이엠소프트</address>
-                <ul>
-                    <li>tel: 031-308-5865</li>
-                    <li>fax: 031-624-5969</li>
-                    <li><a href="mailto:sales@jm-soft.co.kr">e-mail: sales@jm-soft.co.kr</a></li>
-                </ul>
-            </div>
-            <div class="copyright">Copyright © JM-SOFT Co., Ltd. All Rights Reserved.</div>
-        </section>
-    </footer>
-</main>
-<script type="text/javascript" src="assets/js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="assets/js/slick.min.js"></script>
-<script src='assets/js/imagesloaded.pkgd.min.js'></script>
-<script src="assets/js/script.js"></script>
+  </div>
+  <ul class="menu">
+    <li><a class="" href="about.html">about</a></li>
+    <li><a class="active" href="solutions-iiot.html">solutions</a></li>
+    <li><a class="" href="services.html">services</a></li>
+    <li><a class="" href="support.html">support</a></li>
+  </ul>
+  <ul class="language">
+    <li><a href="" class="active">kr</a></li>
+    <li><a href="">en</a></li>
+  </ul>
+</header>
+
+<div class="content solutions smart-factory-automation sub">
+  <div class="title">
+    <h1 class="wrapper">solutions</h1>
+  </div>
+  <div class="wrapper">
+    <ul class="sub-menu">
+      <li><a href="solutions-iiot.html">Smart IIoT</a></li>
+      <li><a href="solutions-rcs.html">Remote Control System</a></li>
+      <li class="active"><a href="solutions-fa.html">Smart Factory Automation</a></li>
+      <li><a href="solutions-dt.html">Digital Transformation</a></li>
+    </ul>
+    <ul class="tabs">
+      <li>RTMS</li>
+      <li>DMS</li>
+      <li>CIM/GEM</li>
+      <li>PSM</li>
+    </ul>
+  </div>
+  <div class="tab-content wrapper">
+    <div class="rtms">
+      <div class="sub-title">
+        <h2>RTMS <small>Realtime Monitoring System</small></h2>
+        <p>RTMS는 설비 및 공정 상태를 실시간으로 모니터링 하면서 제로 또는 낮은 대기 시간으로 지속적으로 업데이트되는 정보 스트리밍을 제공합니다. 관리자가 심각한 문제를 즉시 식별
+          할 수있는 관련 및 현재 데이터의 지연 시간이 짧은 연속 스트림을 제공하여 사전에 대비하며, 데이터를 추적함으로써 조직은 추세와 성과를 공개하고 예측할 수 있습니다.
+        </p>
+      </div>
+      <section>
+        <img src="assets/images/solutions/fa/rtms.png" alt="">
+      </section>
+      <section class="advantages">
+        <ul>
+          <li>
+            <h4>역할</h4>
+          </li>
+          <li>설비 Status & Alarm 정보</li>
+          <li>설비/작업자/공정 별 불량 현황</li>
+          <li>공정간 데이터 연계성 분석</li>
+          <li>실시간 분석 데이터 제공</li>
+          <li>Bottleneck 분석 자료 제공</li>
+          <li>설비 가동률 제공</li>
+        </ul>
+        <ul>
+          <li>
+            <h4>기대효과</h4>
+          </li>
+          <li>지속적인 설비 관리로 설비 신뢰성 확보</li>
+          <li>최저 불량률 실현</li>
+          <li>데이터 수집으로 인한 불필요한 인력 양산 방지</li>
+          <li>데이터 수집 시간 최소화</li>
+          <li>장애 및 불량에 대한 신속한 분석</li>
+          <li>데이터 처리 간소화</li>
+        </ul>
+      </section>
+      <section>
+        <div class="rtms-slider">
+          <div>
+            <img src="assets/images/solutions/fa/rtms_01.png" alt="">
+            <span>EQP Monitoring</span>
+          </div>
+          <div>
+            <img src="assets/images/solutions/fa/rtms_02.png" alt="">
+            <span>Yield Monitoring</span>
+          </div>
+          <div>
+            <img src="assets/images/solutions/fa/rtms_03.png" alt="">
+            <span>AOI Significant Difference Trend</span>
+          </div>
+          <div>
+            <img src="assets/images/solutions/fa/rtms_04.png" alt="">
+            <span>Repair Success Rate Trend</span>
+          </div>
+          <div>
+            <img src="assets/images/solutions/fa/rtms_05.png" alt="">
+            <span>EQP Tact Time Report</span>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="dms">
+      <div class="sub-title">
+        <h2>DMS <small>Defect Management System</small></h2>
+        <p>
+          비전 검사 설비에서 검출한 불량에 대해서 별도의 설비 없이 가상으로 설비의 데이터와 이미지를 사용하여 불량을 선 판정하는 시스템으로 과검출 된
+          Defect을 DRS에서 작업자가 직접 판정하고, 검사 대상 Defect을 선별하여 비전 검사 설비의 Load를 줄여주고 물류 성능을 향상합니다. 별도의 설비가 없으므로,
+          실물이 움직이지 않고 판정하므로 빠른 판정이 가능합니다.
+        </p>
+      </div>
+      <section class="advantages">
+        <ul>
+          <li>빠른 판정으로 물류 Tact time 최소화</li>
+          <li>다양한 불량 정보 수집, 가공 하여 분석 및 통계데이터 제공</li>
+          <li>불량 검출력 향상 조치 예방에 도움</li>
+          <li>직관적 UI 구성으로 사용자 편의성 증대</li>
+          <li>상세 불량정보 이미지로 조회 가능</li>
+          <li>통계 데이터 Excel 파일 저장 다양한 분석 활용 용의</li>
+        </ul>
+        <ul>
+          <li>Smart-IT Server의 학습Data를 활용하여 기존 DRS시스템 을 고도화 하여 Repair설비의 Load를 줄여주고 물류 성능을 향상시킴</li>
+          <li>안정되고 저비용 확장 성이 보장된 무정지 “DMS” 시스템 구축</li>
+          <li>Smart-IT Server와 연동할 수 있는 유연한 인터페이스제공</li>
+          <li>검증된 DRS시스템 제공</li>
+          <li>고객 작업환경에 맞는 UI제공</li>
+        </ul>
+      </section>
+      <section class="interface">
+        <h3>DMS와 Runner 서버 간의 Data Interface 구성</h3>
+        <img src="assets/images/solutions/fa/dms.png" alt="">
+      </section>
+      <section class="process">
+        <ul>
+          <li>자동 판정 Process Alive/Dead Check (TCP/IP 통신 연결 상태 유무로 판단)</li>
+          <li>자동 판정 Process 및 관리 Process 상태를 DMS Server에 보고 (해당 Process 상태를 모니터링 하기 위한 용도)</li>
+          <li>MES 에서 Image Download 및 저장</li>
+          <li>Download한 Image 경로를 자동판정 Process에 전달</li>
+          <li>자동 판정 완료 결과를 DRS Server에 보고</li>
+          <li>Download한 Image를 Data Server에 Upload</li>
+          <li>SAN Switch 사용으로 인한 Data 전송 안정성 확보</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Smart BI Server</h3>
+        <div class="dms-slider">
+          <div>
+            <img src="assets/images/solutions/fa/dms_01.png" alt="">
+          </div>
+          <div>
+            <img src="assets/images/solutions/fa/dms_02.png" alt="">
+          </div>
+          <div>
+            <img src="assets/images/solutions/fa/dms_03.png" alt="">
+          </div>
+          <div>
+            <img src="assets/images/solutions/fa/dms_04.png" alt="">
+          </div>
+          <div>
+            <img src="assets/images/solutions/fa/dms_05.png" alt="">
+          </div>
+          <div>
+            <img src="assets/images/solutions/fa/dms_06.png" alt="">
+          </div>
+          <div>
+            <img src="assets/images/solutions/fa/dms_07.png" alt="">
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="cim">
+      <div class="sub-title">
+        <h2>CIM & GEM<small>Computer Integrated Manufacturing</small></h2>
+        <p>장비(EQ)와 상위 HOST간의 매개체 역할을 하며, EQP 내에서 여러 UNIT을 통합 운영 하는 시스템으로서 공정 정보 및 물류 정보를 상위로 보고 하고 HOST에서 공정 데이터를 전송
+          받아 장비 운영에
+          사용합니다. Recipe에 따른 다양한 검사 방법을 제공하고 검사에 필요한 다양한 요소와의 인터페이스를
+          제공 함으로써 검사 진행의 Main Control을 담당합니다.</p>
+      </div>
+      <section class="process">
+        <ul>
+          <li>
+            LCD / OLED / 반도체 생산 공정에서 데이터 또는 이벤트의 상하교환을 위해 HSMS에 따른 통신을 준수토록 지정
+          </li>
+          <li>
+            물류 장비 및 데이터를 처리하는 객체간 통신 프로토콜 준수로 인한
+            복잡함을 대체하기 위해 SCP CIM 도입
+          </li>
+          <li>
+            HSMS외 효율적인 검사 모듈 및 데이터 처리를 포함하고 상황에 맞는 이벤트 처리와 Status 보고 등의 복잡한 기능들을 구현
+          </li>
+          <li>
+            통신을 포함 더욱 다양하고 효율적인 검사 및 장비 운용을 위해서 SCP CIM 의 역할이 지속적으로 중요시
+          </li>
+        </ul>
+      </section>
+      <section class="advantages">
+        <ul>
+          <li>MES와 Online 유지 및 Spec에 따른 자동화 보고</li>
+          <li>Equipment Data 관리</li>
+          <li>Recipe에 따른 다양하고 능동적 검사 방식 제공</li>
+          <li>판정제어 기능에 따른 작업자의 판정 실수 예방</li>
+          <li>Flexible Port 기능으로 효율적이고 편리한 포트 관리 방법 제공</li>
+          <li>Flexible Pattern기능으로 패턴 검사의 Tact을 줄일수 있는 방법 제공</li>
+          <li>Blind Test와 연동해 작업자의 검사 역량 강화</li>
+          <li>안정적인 실시간 데이터 백업 및 Restore기능 제공</li>
+          <li>검사를 하기 위한 사전 데이터 수집</li>
+          <li>검사 결과를 다양한 수집 Object로 전송해 정확한 검사와 다양한 모니터링을 위한 리소스 제공</li>
+        </ul>
+      </section>
+      <section>
+        <div class="cim-slider">
+          <div>
+            <img src="assets/images/solutions/fa/cim_01.jpg" alt="">
+            <span>Main</span>
+          </div>
+          <div>
+            <img src="assets/images/solutions/fa/cim_02.jpg" alt="">
+            <span>환경 설정</span>
+          </div>
+          <div>
+            <img src="assets/images/solutions/fa/cim_03.jpg" alt="">
+            <span>포트 관리</span>
+          </div>
+          <div>
+            <img src="assets/images/solutions/fa/cim_04.jpg" alt="">
+            <span>PM 관리</span>
+          </div>
+          <div>
+            <img src="assets/images/solutions/fa/cim_05.jpg" alt="">
+            <span>MES와 처리할 이벤트를 관리하는 EOID 설정</span>
+          </div>
+          <div>
+            <img src="assets/images/solutions/fa/cim_06.jpg" alt="">
+            <span>Shift 데이터</span>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="psm">
+      <div class="sub-title">
+        <h2>PSM</h2>
+        <p>PSM</p>
+      </div>
+
+    </div>
+  </div>
+</div>
 <script>
-    $('.rtms-slider').slick({
-        lazyLoad: 'ondemand',
-        autoplay: true,
-        centerMode: true,
-        centerPadding: '60px',
-        slidesToShow: 3,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
-                }
-            }
-        ]
-    });
+  $('.rtms-slider, .dms-slider, .cim-slider').slick({
+    lazyLoad: 'ondemand',
+    autoplay: true,
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
 
-    $('.dms-slider').slick({
-        lazyLoad: 'ondemand',
-        autoplay: true,
-        centerMode: true,
-        centerPadding: '60px',
-        slidesToShow: 3,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
-                }
-            }
-        ]
-    });
-
-    $('.rcs-function').slick({
-        infinite: true,
-        speed: 500,
-        fade: true,
-        autoplay: true,
-        arrows: true,
-        dots: true,
-        cssEase: 'linear'
-    });
+  $('.rcs-function').slick({
+    infinite: true,
+    speed: 500,
+    fade: true,
+    autoplay: true,
+    arrows: true,
+    dots: true,
+    cssEase: 'linear'
+  });
 </script>
+
+    <footer>
+      <section class="sitemap wrapper">
+        <div>
+          <h3><a href="about.html">about</a></h3>
+          <ul>
+            <li>Challenge & Passion</li>
+            <li>CEO Greeting</li>
+            <li>Organization</li>
+            <li>Location</li>
+          </ul>
+        </div>
+        <div>
+          <h3><a href="solutions-iiot.html">solution</a></h3>
+          <ul>
+            <li>Smart IIoT Solution</li>
+            <li>Remote Control System</li>
+            <li>Smart Factory Automation</li>
+            <li>Digital Transformation</li>
+          </ul>
+        </div>
+        <div>
+          <h3><a href="services.html">services</a></h3>
+          <ul>
+            <li>System Integration</li>
+            <li>System Consulting</li>
+          </ul>
+        </div>
+        <div>
+          <h3><a href="support.html">support</a></h3>
+        </div>
+      </section>
+      <section class="information wrapper">
+        <div>
+          <address>경기도 용인시 수지구 광교중앙로 338, C동 802호(상현동, 광교우미뉴브) ㈜제이엠소프트</address>
+          <ul>
+            <li>tel: 031-308-5865</li>
+            <li>fax: 031-624-5969</li>
+            <li><a href="mailto:sales@jm-soft.co.kr">e-mail: sales@jm-soft.co.kr</a></li>
+          </ul>
+        </div>
+        <div class="copyright">Copyright © JM-SOFT Co., Ltd. All Rights Reserved.</div>
+      </section>
+    </footer>
+    <button class="scroll-to-top">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" />
+      </svg>
+    </button>
+  </main>
+  <script src="assets/js/script.js"></script>
 </body>
+
 </html>

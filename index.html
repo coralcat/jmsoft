@@ -1,283 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>JM-Soft</title>
-    <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/slick-theme.css">
-    <script>
-        document.documentElement.className = "js";
-        var supportsCssVars = function () {
-            var e, t = document.createElement("style");
-            return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
-        };
-        supportsCssVars() || alert("Please view this in a modern browser that supports CSS Variables.");
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="(주)제이엠소프트 JM-SOFT">
+  <meta property="og:description"
+    content="㈜제이엠소프트는 쉼 없는 정열로 일에 도전하고 목표를 성취하려는 모습, 끊임없이 새로운 것을 개발하고 새로운 방법을 모색하는 열정으로 고객과의 거리를 좁혀나가고 있습니다. 또한 구성원간의 신뢰와 믿음을 통한 투명경영으로 고객의 Needs를 실현하기 위해 항상 최선을 다하고 있습니다.">
+  <title>(주)제이엠소프트</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <script type="text/javascript" src="assets/js/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="assets/js/slick.min.js"></script>
+  <script src='assets/js/imagesloaded.pkgd.min.js'></script>
+  <script>
+    document.documentElement.className = "js";
+    var supportsCssVars = function () {
+      var e, t = document.createElement("style");
+      return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
+    };
+    supportsCssVars() || alert("Please view this in a modern browser that supports CSS Variables.");
+  </script>
 </head>
+
 <body class="loading">
-<main class="main">
-    <header onclick="this.classList.toggle('active')">
-        <div>
-            <a href="index.html">
-                <div class="logo"></div>
-            </a>
-            <div class="hamburger-menu">
-                <svg viewBox="0 0 100 100" width="80">
-                    <path d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40"/>
-                    <path d="m 30,50 h 40"/>
-                    <path d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40"/>
-                </svg>
-            </div>
-        </div>
-        <ul class="menu">
-            <li><a href="about.html">about</a></li>
-            <li><a href="solutions-iiot.html">solution</a></li>
-            <li><a href="services.html">services</a></li>
-            <li><a href="support.html">support</a></li>
-        </ul>
-        <ul class="language">
-            <li><a href="" class="active">kr</a></li>
-            <li><a href="">en</a></li>
-        </ul>
-    </header>
+  <main>
     <div data-scroll>
-        <div class="content">
-            <section id="slider">
-                <div class="text-slider">
-                    <div>
-                        <div class="text wrapper">
-                            <div class="title"><strong>Smart</strong>IIoT</div>
-                            <p>산업 환경에서 사용되는 IoT 기술로 데이터를 처리하는 고급 분석 플랫폼 (Smart Industrial Internet of Things)</p>
-                            <button onclick="location.href='solutions-iiot.html'">Read more</button>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="text wrapper">
-                            <div class="title"><strong>Remote</strong>Control System</div>
-                            <p>원격제어 및 통합 모니터링 시스템</p>
-                            <button onclick="location.href='solutions-rcs.html'">Read more</button>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="text wrapper">
-                            <div class="title"><strong>Smart</strong>Factory Automation</div>
-                            <p>산업설비, 생산물류 운영시스템, RTMS, 공장 자동화 시스템, 통합 시스템</p>
-                            <button onclick="location.href='solutions-fa.html'">Read more</button>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="text wrapper">
-                            <div class="title"><strong>Digital</strong>Transformation</div>
-                            <p>사물 인터넷(IoT), 클라우드 컴퓨팅, 인공지능(AI),
-                                빅데이터 솔루션 등 정보통신기술(ICT)을 플랫폼으로 구축·활용</p>
-                            <button onclick="location.href='solutions-dt.html'">Read more</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="business-area" class="wrapper">
-                <h1>business area</h1>
-                <div class="cards">
-                    <a href="solutions-iiot.html" class="card">
-                        <div class="title">Smart IIoT</div>
-                        <ul>
-                            <li>Industrial IoT System</li>
-                            <li>EQP/MES Data Integration</li>
-                            <li>Big Data Messaging Middleware</li>
-                        </ul>
-                        <button>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-                                <path d="M9 3L7.94 4.06l4.19 4.19H3v1.5h9.13l-4.19 4.19L9 15l6-6z"/>
-                            </svg>
-                        </button>
-                    </a>
-                    <a href="solutions-rcs.html" class="card">
-                        <div class="title">Remote Control System</div>
-                        <ul>
-                            <li>Remote Control System<br/>(S/W, H/W)</li>
-                            <li>Process Control System<br/>(PC, HMI, CCTV, I/O Unit)</li>
-                        </ul>
-                        <button>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-                                <path d="M9 3L7.94 4.06l4.19 4.19H3v1.5h9.13l-4.19 4.19L9 15l6-6z"/>
-                            </svg>
-                        </button>
-                    </a>
-                    <a href="solutions-fa.html" class="card">
-                        <div class="title">Smart Factory Automation</div>
-                        <ul>
-                            <li>RTMS (Real Time Monitoring System)</li>
-                            <li>DMS (Defect Management System)</li>
-                            <li>CIM/GEM</li>
-                            <li>EQP/PLC Control</li>
-                        </ul>
-                        <button>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-                                <path d="M9 3L7.94 4.06l4.19 4.19H3v1.5h9.13l-4.19 4.19L9 15l6-6z"/>
-                            </svg>
-                        </button>
-                    </a>
-                    <a href="solutions-dt.html" class="card">
-                        <div class="title">Digital Transformation</div>
-                        <ul>
-                            <li>A.I. Machine Learning</li>
-                            <li>A.I. Deep Learning</li>
-                            <li>RSS (Remote Support System)</li>
-                            <li>System Parts</li>
-                            <li>- H/W : HP, Dell, Renovo, Etc.</li>
-                            <li>- S/W : Management Service IT Infrastructure</li>
-                        </ul>
-                        <button>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-                                <path d="M9 3L7.94 4.06l4.19 4.19H3v1.5h9.13l-4.19 4.19L9 15l6-6z"/>
-                            </svg>
-                        </button>
-                    </a>
-                </div>
-            </section>
-            <section id="services">
-                <div class="image-wrapper image-wrapper-01">
-                    <div class="image"></div>
-                </div>
-                <div class="wrapper">
-                    <h1>services</h1>
-                    <div class="services">
-                        <div class="si">
-                            <div class="title">System Integration</div>
-                            <ul>
-                                <li>전문 컨설턴트에 의한 시스템 설계로 안정된 시스템 설계 및 구현을 통해 원활한 서비스 지원</li>
-                                <li>기타 SI개발 솔루션을 적용한 시스템의 유연성 부여 및 통합 관리 시스템 지원</li>
-                                <li>설계 단계부터 구현 단계까지의 토털 컨설팅 서비스를 통한 유지보수의 융통성부여 및 업그레이드 용이</li>
-                                <li>위탁, 공동개발 등 다양한 개발 방식지원을 통한 단가감소 효과 유발</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <div class="image-wrapper image-wrapper-02">
-                                <div class="image"></div>
-                            </div>
-                            <div class="sc">
-                                <div class="title">System Consulting</div>
-                                <ul>
-                                    <li>S/W 성능 및 운영 범주에 가장 적합한 전산장비 도입으로 최적화 전산시스템 성능 발휘</li>
-                                    <li>하드웨어 전문가에 의한 일체의 전산장비 및 각종 기본장치에 대한 설치와 성능 테스트를 통해 불필요한 시간단축 및 가장 안정적인 시스템 설비제공
-                                    </li>
-                                    <li>전산설비의 안정적 운영을 위한 하드웨어 A/S 서비스를 통해 장애 발생시 절대적 복구 시간 단축</li>
-                                    <li>향후 업그레이드 조치 시 기존 전산설비 분석으로 대체 전산설비 도입</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="customers">
-                <div class="wrapper">
-                    <h1>customers</h1>
-                    <div class="customers">
-                        <div><img src="assets/images/logo/ss_display.png" alt=""></div>
-                        <div><img src="assets/images/logo/ss_semi.png" alt=""></div>
-                        <div><img src="assets/images/logo/imarket.png" alt=""></div>
-                        <div><img src="assets/images/logo/oncell_tech.png" alt=""></div>
-                        <div><img src="assets/images/logo/wonik.png" alt=""></div>
-                        <div><img src="assets/images/logo/sk_siltron.png" alt=""></div>
-                        <div><img src="assets/images/logo/charm.png" alt=""></div>
-                        <div><img src="assets/images/logo/yang.png" alt=""></div>
-                        <div><img src="assets/images/logo/ap_systems.png" alt=""></div>
-                        <div><img src="assets/images/logo/enc_tech.png" alt=""></div>
-                        <div><img src="assets/images/logo/atomy.png" alt=""></div>
-                        <div><img src="assets/images/logo/innodep.png" alt=""></div>
-                        <div><img src="assets/images/logo/lilycover.png" alt=""></div>
-                        <div><img src="assets/images/logo/dsht.png" alt=""></div>
-                        <div><img src="assets/images/logo/bukedu.png" alt=""></div>
-                        <div><img src="assets/images/logo/gsi.png" alt=""></div>
-                        <div><img src="assets/images/logo/volans.png" alt=""></div>
-                        <div><img src="assets/images/logo/humin_tech.png" alt=""></div>
-                        <div><img src="assets/images/logo/ani.png" alt=""></div>
-                        <div><img src="assets/images/logo/hive_vision.png" alt=""></div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <footer>
-            <section class="sitemap wrapper">
-                <div>
-                    <h3><a href="about.html">about</a></h3>
-                    <ul>
-                        <li>Challenge & Passion</li>
-                        <li>CEO Greeting</li>
-                        <li>Organization</li>
-                        <li>Location</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3><a href="solutions-iiot.html">solution</a></h3>
-                    <ul>
-                        <li>Smart IIoT Solution</li>
-                        <li>Remote Control System</li>
-                        <li>Smart Factory Automation</li>
-                        <li>Digital Transformation</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3><a href="services.html">services</a></h3>
-                    <ul>
-                        <li>System Integration</li>
-                        <li>System Consulting</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3><a href="support.html">support</a></h3>
-                </div>
-            </section>
-            <section class="information wrapper">
-                <div>
-                    <address>경기도 용인시 수지구 광교중앙로 338, C동 802호(상현동, 광교우미뉴브) ㈜제이엠소프트</address>
-                    <ul>
-                        <li>tel: 031-308-5865</li>
-                        <li>fax: 031-624-5969</li>
-                        <li><a href="mailto:sales@jm-soft.co.kr">e-mail: sales@jm-soft.co.kr</a></li>
-                    </ul>
-                </div>
-                <div class="copyright">Copyright © JM-SOFT Co., Ltd. All Rights Reserved.</div>
-            </section>
-        </footer>
+      
+
+
+<header onclick="this.classList.toggle('active')">
+  <div>
+    <a href="index.html">
+      <div class="logo"></div>
+    </a>
+    <div class="hamburger-menu">
+      <svg viewBox="0 0 100 100" width="80">
+        <path
+          d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+        <path d="m 30,50 h 40" />
+        <path
+          d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+      </svg>
     </div>
-</main>
-<script type="text/javascript" src="assets/js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="assets/js/slick.min.js"></script>
-<script src='assets/js/imagesloaded.pkgd.min.js'></script>
-<script src="assets/js/script.js"></script>
+  </div>
+  <ul class="menu">
+    <li><a class="" href="about.html">about</a></li>
+    <li><a class="" href="solutions-iiot.html">solutions</a></li>
+    <li><a class="" href="services.html">services</a></li>
+    <li><a class="" href="support.html">support</a></li>
+  </ul>
+  <ul class="language">
+    <li><a href="" class="active">kr</a></li>
+    <li><a href="">en</a></li>
+  </ul>
+</header>
+
+<div class="main content">
+  <section id="slider">
+    <div class="text-slider">
+      <div>
+        <div class="text wrapper">
+          <div class="title">
+            <strong>Smart</strong><span>IIoT</span>
+          </div>
+          <p>산업 환경에서 사용되는 IoT 기술로 데이터를 처리하는 고급 분석 플랫폼 (Smart Industrial Internet of Things)</p>
+          <button onclick="location.href='solutions-iiot.html'">Read more</button>
+        </div>
+      </div>
+      <div>
+        <div class="text wrapper">
+          <div class="title">
+            <strong>Remote</strong><span>Control System</span>
+          </div>
+          <p>원격제어 및 통합 모니터링 시스템</p>
+          <button onclick="location.href='solutions-rcs.html'">Read more</button>
+        </div>
+      </div>
+      <div>
+        <div class="text wrapper">
+          <div class="title">
+            <strong>Smart</strong><span>Factory Automation</span>
+          </div>
+          <p>산업설비, 생산물류 운영시스템, RTMS, 공장 자동화 시스템, 통합 시스템</p>
+          <button onclick="location.href='solutions-fa.html'">Read more</button>
+        </div>
+      </div>
+      <div>
+        <div class="text wrapper">
+          <div class="title">
+            <strong>Digital</strong><span>Transformation</span>
+          </div>
+          <p>사물 인터넷(IoT), 클라우드 컴퓨팅, 인공지능(AI),
+            빅데이터 솔루션 등 정보통신기술(ICT)을 플랫폼으로 구축·활용</p>
+          <button onclick="location.href='solutions-dt.html'">Read more</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="business-area" class="wrapper">
+    <h1>
+      <ul class="js-splitted-text">business area</ul>
+    </h1>
+    <div class="cards">
+      <a href="solutions-iiot.html" class="card">
+        <div class="title">Smart<br>IIoT</div>
+        <ul>
+          <li>Industrial IoT System</li>
+          <li>EQP/MES Data Integration</li>
+          <li>Big Data Messaging Middleware</li>
+        </ul>
+        <button>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+            <path d="M9 3L7.94 4.06l4.19 4.19H3v1.5h9.13l-4.19 4.19L9 15l6-6z" />
+          </svg>
+        </button>
+      </a>
+      <a href="solutions-rcs.html" class="card">
+        <div class="title">Remote Control System</div>
+        <ul>
+          <li>Remote Control System<br />(S/W, H/W)</li>
+          <li>Process Control System<br />(PC, HMI, CCTV, I/O Unit)</li>
+        </ul>
+        <button>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+            <path d="M9 3L7.94 4.06l4.19 4.19H3v1.5h9.13l-4.19 4.19L9 15l6-6z" />
+          </svg>
+        </button>
+      </a>
+      <a href="solutions-fa.html" class="card">
+        <div class="title">Smart Factory Automation</div>
+        <ul>
+          <li>RTMS (Real Time Monitoring System)</li>
+          <li>DMS (Defect Management System)</li>
+          <li>CIM/GEM</li>
+          <li>EQP/PLC Control</li>
+        </ul>
+        <button>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+            <path d="M9 3L7.94 4.06l4.19 4.19H3v1.5h9.13l-4.19 4.19L9 15l6-6z" />
+          </svg>
+        </button>
+      </a>
+      <a href="solutions-dt.html" class="card">
+        <div class="title">Digital Transformation</div>
+        <ul>
+          <li>A.I. Deep Learning</li>
+          <li>RSS (Remote Support System)</li>
+          <li>System Parts</li>
+          <li>- H/W : HP, Dell, Renovo, Etc.</li>
+          <li>- S/W : Management Service IT Infrastructure</li>
+        </ul>
+        <button>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+            <path d="M9 3L7.94 4.06l4.19 4.19H3v1.5h9.13l-4.19 4.19L9 15l6-6z" />
+          </svg>
+        </button>
+      </a>
+    </div>
+  </section>
+  <section class="services-01">
+    <div class="image-wrapper image-wrapper-01">
+      <div class="image"></div>
+    </div>
+    <div class="wrapper">
+      <h1 class="js-splitted-text">services</h1>
+      <div class="si">
+        <div class="title">
+          <span>System Integration</span>
+        </div>
+        <ul>
+          <li>전문 컨설턴트에 의한 시스템 설계로 안정된 시스템 설계 및 구현을 통해 원활한 서비스 지원</li>
+          <li>기타 SI개발 솔루션을 적용한 시스템의 유연성 부여 및 통합 관리 시스템 지원</li>
+          <li>설계 단계부터 구현 단계까지의 토털 컨설팅 서비스를 통한 유지보수의 융통성부여 및 업그레이드 용이</li>
+          <li>위탁, 공동개발 등 다양한 개발 방식지원을 통한 단가감소 효과 유발</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="services-02">
+    <div class="image-wrapper image-wrapper-02">
+      <div class="image"></div>
+    </div>
+    <div class="wrapper">
+      <div class="sc">
+        <div class="title">
+          <span>System Consulting</span>
+        </div>
+        <ul>
+          <li>S/W 성능 및 운영 범주에 가장 적합한 전산장비 도입으로 최적화 전산시스템 성능 발휘</li>
+          <li>하드웨어 전문가에 의한 일체의 전산장비 및 각종 기본장치에 대한 설치와 성능 테스트를 통해 불필요한 시간단축 및 가장 안정적인 시스템 설비제공
+          </li>
+          <li>전산설비의 안정적 운영을 위한 하드웨어 A/S 서비스를 통해 장애 발생시 절대적 복구 시간 단축</li>
+          <li>향후 업그레이드 조치 시 기존 전산설비 분석으로 대체 전산설비 도입</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section id="customers" class="customers">
+    <div class="wrapper">
+      <h1 class="js-splitted-text">customers</h1>
+      <div class="customers">
+        <div><img src="assets/images/logo/ss_display.png" alt=""></div>
+        <div><img src="assets/images/logo/ss_semi.png" alt=""></div>
+        <div><img src="assets/images/logo/imarket.png" alt=""></div>
+        <div><img src="assets/images/logo/oncell_tech.png" alt=""></div>
+        <div><img src="assets/images/logo/wonik.png" alt=""></div>
+        <div><img src="assets/images/logo/sk_siltron.png" alt=""></div>
+        <div><img src="assets/images/logo/charm.png" alt=""></div>
+        <div><img src="assets/images/logo/yang.png" alt=""></div>
+        <div><img src="assets/images/logo/ap_systems.png" alt=""></div>
+        <div><img src="assets/images/logo/enc_tech.png" alt=""></div>
+        <div><img src="assets/images/logo/atomy.png" alt=""></div>
+        <div><img src="assets/images/logo/innodep.png" alt=""></div>
+        <div><img src="assets/images/logo/lilycover.png" alt=""></div>
+        <div><img src="assets/images/logo/dsht.png" alt=""></div>
+        <div><img src="assets/images/logo/bukedu.png" alt=""></div>
+        <div><img src="assets/images/logo/gsi.png" alt=""></div>
+        <div><img src="assets/images/logo/volans.png" alt=""></div>
+        <div><img src="assets/images/logo/humin_tech.png" alt=""></div>
+        <div><img src="assets/images/logo/ani.png" alt=""></div>
+        <div><img src="assets/images/logo/hive_vision.png" alt=""></div>
+      </div>
+    </div>
+  </section>
+</div>
 <script>
-    $('.text-slider').slick({
-        infinite: true,
-        speed: 500,
-        fade: true,
-        autoplay: true,
-        arrows: true,
-        dots: true,
-        cssEase: 'linear',
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
-                    dots: false
-                }
-            },
-        ]
+  $('.text-slider').slick({
+    infinite: true,
+    speed: 500,
+    fade: true,
+    autoplay: true,
+    arrows: true,
+    dots: true,
+    cssEase: 'linear',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          dots: false
+        }
+      },
+    ]
+  });
+
+  if (matchMedia("screen and (max-width: 767px)").matches) {
+    $('.customers').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
     });
 
-    if(matchMedia("screen and (max-width: 767px)").matches) {
-        $('.customers').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 2000,
-        });
-    }
+    document.querySelector('div[data-scroll]').removeAttribute('data-scroll')
+  }
 </script>
+
+      <footer>
+        <section class="sitemap wrapper">
+          <div>
+            <h3><a href="about.html">about</a></h3>
+            <ul>
+              <li>Challenge & Passion</li>
+              <li>CEO Greeting</li>
+              <li>Organization</li>
+              <li>Location</li>
+            </ul>
+          </div>
+          <div>
+            <h3><a href="solutions-iiot.html">solution</a></h3>
+            <ul>
+              <li>Smart IIoT Solution</li>
+              <li>Remote Control System</li>
+              <li>Smart Factory Automation</li>
+              <li>Digital Transformation</li>
+            </ul>
+          </div>
+          <div>
+            <h3><a href="services.html">services</a></h3>
+            <ul>
+              <li>System Integration</li>
+              <li>System Consulting</li>
+            </ul>
+          </div>
+          <div>
+            <h3><a href="support.html">support</a></h3>
+          </div>
+        </section>
+        <section class="information wrapper">
+          <div>
+            <address>경기도 용인시 수지구 광교중앙로 338, C동 802호(상현동, 광교우미뉴브) ㈜제이엠소프트</address>
+            <ul>
+              <li>tel: 031-308-5865</li>
+              <li>fax: 031-624-5969</li>
+              <li><a href="mailto:sales@jm-soft.co.kr">e-mail: sales@jm-soft.co.kr</a></li>
+            </ul>
+          </div>
+          <div class="copyright">Copyright © JM-SOFT Co., Ltd. All Rights Reserved.</div>
+        </section>
+      </footer>
+    </div>
+    <button class="scroll-to-top">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" />
+      </svg>
+    </button>
+  </main>
+  <script src="assets/js/script.js"></script>
 </body>
+
 </html>

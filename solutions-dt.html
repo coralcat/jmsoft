@@ -1,85 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>JM-Soft</title>
-    <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/slick-theme.css">
-    <script>
-        document.documentElement.className = "js";
-        var supportsCssVars = function () {
-            var e, t = document.createElement("style");
-            return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
-        };
-        supportsCssVars() || alert("Please view this in a modern browser that supports CSS Variables.");
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="(주)제이엠소프트 JM-SOFT">
+  <meta property="og:description"
+    content="㈜제이엠소프트는 쉼 없는 정열로 일에 도전하고 목표를 성취하려는 모습, 끊임없이 새로운 것을 개발하고 새로운 방법을 모색하는 열정으로 고객과의 거리를 좁혀나가고 있습니다. 또한 구성원간의 신뢰와 믿음을 통한 투명경영으로 고객의 Needs를 실현하기 위해 항상 최선을 다하고 있습니다.">
+  <title>(주)제이엠소프트</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <script type="text/javascript" src="assets/js/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="assets/js/slick.min.js"></script>
+  <script src='assets/js/imagesloaded.pkgd.min.js'></script>
+  <script>
+    document.documentElement.className = "js";
+    var supportsCssVars = function () {
+      var e, t = document.createElement("style");
+      return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
+    };
+    supportsCssVars() || alert("Please view this in a modern browser that supports CSS Variables.");
+  </script>
 </head>
+
 <body class="loading">
-<main class="solutions digital-transformation sub">
-    <header onclick="this.classList.toggle('active')">
-        <div>
-            <a href="index.html">
-                <div class="logo"></div>
-            </a>
-            <div class="hamburger-menu">
-                <svg viewBox="0 0 100 100" width="80">
-                    <path d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40"/>
-                    <path d="m 30,50 h 40"/>
-                    <path d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40"/>
-                </svg>
-            </div>
-        </div>
-        <ul class="menu">
-            <li><a href="about.html">about</a></li>
-            <li><a href="solutions-iiot.html" class="active">solution</a></li>
-            <li><a href="services.html">services</a></li>
-            <li><a href="support.html">support</a></li>
-        </ul>
-        <ul class="language">
-            <li><a href="" class="active">kr</a></li>
-            <li><a href="">en</a></li>
-        </ul>
-    </header>
-    <div class="content">
-        <div class="title">
-            <h1 class="wrapper">solutions</h1>
-        </div>
-        <div class="wrapper">
-            <ul class="sub-menu">
-                <li><a href="solutions-iiot.html">Smart IIoT</a></li>
-                <li><a href="solutions-rcs.html">Remote Control System</a></li>
-                <li><a href="solutions-fa.html">Smart Factory Automation</a></li>
-                <li class="active"><a href="solutions-dt.html">Digital Transformation</a></li>
-            </ul>
-            <ul class="tabs">
-                <li>A.I. Machine Learning</li>
-                <li>A.I. Deep Learning</li>
-                <li>RSS</li>
-                <li>IT Infrastructure</li>
-            </ul>
-        </div>
-        <div class="tab-content wrapper">
-            <div>
+  <main>
+    
+
+
+<header onclick="this.classList.toggle('active')">
+  <div>
+    <a href="index.html">
+      <div class="logo"></div>
+    </a>
+    <div class="hamburger-menu">
+      <svg viewBox="0 0 100 100" width="80">
+        <path
+          d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+        <path d="m 30,50 h 40" />
+        <path
+          d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+      </svg>
+    </div>
+  </div>
+  <ul class="menu">
+    <li><a class="" href="about.html">about</a></li>
+    <li><a class="active" href="solutions-iiot.html">solutions</a></li>
+    <li><a class="" href="services.html">services</a></li>
+    <li><a class="" href="support.html">support</a></li>
+  </ul>
+  <ul class="language">
+    <li><a href="" class="active">kr</a></li>
+    <li><a href="">en</a></li>
+  </ul>
+</header>
+
+<div class="solutions digital-transformation sub content">
+  <div class="title">
+    <h1 class="wrapper">solutions</h1>
+  </div>
+  <div class="wrapper">
+    <ul class="sub-menu">
+      <li><a href="solutions-iiot.html">Smart IIoT</a></li>
+      <li><a href="solutions-rcs.html">Remote Control System</a></li>
+      <li><a href="solutions-fa.html">Smart Factory Automation</a></li>
+      <li class="active"><a href="solutions-dt.html">Digital Transformation</a></li>
+    </ul>
+    <ul class="tabs">
+      <li>IT Infrastructure</li>
+    </ul>
+  </div>
+  <div class="tab-content wrapper">
+    <!-- <div class="rss">
                 <div class="sub-title">
-                    <h2>A.I. Machine Learning</h2>
-                    <p>머신러닝을 기반으로 데이터전처리(높은상관관계, 아웃라이어 제거), 데이터분석(데이터 성격 파악 및 학습전략수립) 변수선정(영향도 우선순위 제공), 피쳐셀렉션(학습용 변수추출
-                        알고리즘), 인공지능모델생성(기계학습 알고리즘), 모델평가(모델 품질 측정), 모델시뮬레이션(테스트 데이터 활용 예측), 모델테스트결과(예측 정확도 제시)을 통한 기계학습,
-                        강화학습, 가상계측 기반의 MES, APC, R2R 솔루션입니다.</p>
-                </div>
-                <img src="assets/images/sub/chart-machinelearning.png" alt="">
-            </div>
-            <div>
-                <div class="sub-title">
-                    <h2>A.I. Deep Learning</h2>
-                    <p>test2</p>
-                </div>
-            </div>
-            <div class="rss">
-                <div class="sub-title">
-                    <h2>CO-VIEW</h2>
+                    <h2>RSS</h2>
                     <p>
                         CO-VIEW는 실시간 영상 원격 상담 솔루션으로, 복잡한 앱 다운로드 없이, SMS(문자발송) 전송만으로 고객과 상담원의 영상 상담이 가능한 새로운 서비스입니다.
                     </p>
@@ -111,111 +124,118 @@
                         <li>구두로 설명이 어렵거나, 실시간 작업 지시가 필요할 때 Remote Pointer 기능 및 Live PEN 기능을 이용하면 정확하고 신속한 협업이 가능</li>
                     </ul>
                 </section>
-            </div>
-            <div class="it-infra">
-                <div class="sub-title">
-                    <h2>IT Infrastructure</h2>
-                    <p>기업들이 사용하는 H/W와 S/W의 수가 늘어가고 이와 관련된 유지보수 업체 및 계약건수가 늘어감에 따라 기존 개별 유지보수 체계로는 기업의 효율적이고 안정적인
-                        IT운영을 지원하기 어려워지고 있습니다. IT 인프라 유지보수 서비스는 하나의 단일계약으로 모든IT 인프라에 대한 지원을 하는 새로운 형태의 유지보수 서비스입니다.</p>
-                    <p>㈜제이엠소프트는 다양한 컨설팅 및 서비스 운영경험을 바탕으로, 고객의 경영과 IT를 유기적으로 통합시켜 빠르게 변화하는 비즈니스 환경에 부합할 수 있도록 최적의 시스템을
-                        분석, 설계 방안을 제시해 나가겠습니다.
-                    </p>
-                </div>
-                <section class="advantages">
-                    <ul>
-                        <li>유지보수 프로세스 단일화, 표준화, 절차화</li>
-                        <li>유지보수 관리 최적화</li>
-                        <li>통합 보고서 관리</li>
-                        <li>유지보수 관리 노하우 적용</li>
-                    </ul>
-                    <ul>
-                        <li>통합적인 쟁애관리를 통한 안정적인 운영</li>
-                        <li>간접/직접 비용 절감</li>
-                        <li>유지보수 기술수준과 관리체계의 조화</li>
-                        <li>단일 창구 제공</li>
-                    </ul>
-                    <ul>
-                        <li>PM 의 종합적 관리</li>
-                        <li>일원화된 관리를 통한 업무 운영 효율 극대화</li>
-                        <li>유지보수 서비스 품질향상을 통한 고가용성 유지</li>
-                    </ul>
+            </div> -->
+    <div class="it-infra">
+      <div class="sub-title">
+        <h2>IT Infrastructure</h2>
+        <p>기업들이 사용하는 H/W와 S/W의 수가 늘어가고 이와 관련된 유지보수 업체 및 계약건수가 늘어감에 따라 기존 개별 유지보수 체계로는 기업의 효율적이고 안정적인
+          IT운영을 지원하기 어려워지고 있습니다. IT 인프라 유지보수 서비스는 하나의 단일계약으로 모든IT 인프라에 대한 지원을 하는 새로운 형태의 유지보수 서비스입니다.</p>
+        <p>㈜제이엠소프트는 다양한 컨설팅 및 서비스 운영경험을 바탕으로, 고객의 경영과 IT를 유기적으로 통합시켜 빠르게 변화하는 비즈니스 환경에 부합할 수 있도록 최적의 시스템을
+          분석, 설계 방안을 제시해 나가겠습니다.
+        </p>
+      </div>
+      <section class="advantages">
+        <ul>
+          <li>유지보수 프로세스 단일화, 표준화, 절차화</li>
+          <li>유지보수 관리 최적화</li>
+          <li>통합 보고서 관리</li>
+          <li>유지보수 관리 노하우 적용</li>
+        </ul>
+        <ul>
+          <li>통합적인 쟁애관리를 통한 안정적인 운영</li>
+          <li>간접/직접 비용 절감</li>
+          <li>유지보수 기술수준과 관리체계의 조화</li>
+          <li>단일 창구 제공</li>
+        </ul>
+        <ul>
+          <li>PM 의 종합적 관리</li>
+          <li>일원화된 관리를 통한 업무 운영 효율 극대화</li>
+          <li>유지보수 서비스 품질향상을 통한 고가용성 유지</li>
+        </ul>
 
-                </section>
-                <section class="before-after">
-                    <h3>IT 인프라 통합유지보수</h3>
-                    <div>
-                        <ul>
-                            <li><h4>통합유지보수 전</h4></li>
-                            <li><img src="assets/images/solutions/it-infra-before.png" alt=""></li>
-                        </ul>
-                        <ul>
-                            <li><h4>통합유지보수 후</h4></li>
-                            <li><img src="assets/images/solutions/it-infra-after.png" alt=""></li>
-                        </ul>
-                    </div>
-                </section>
-            </div>
+      </section>
+      <section class="before-after">
+        <h3>IT 인프라 통합유지보수</h3>
+        <div>
+          <ul>
+            <li>
+              <h4>통합유지보수 전</h4>
+            </li>
+            <li><img src="assets/images/solutions/it-infra-before.png" alt=""></li>
+          </ul>
+          <ul>
+            <li>
+              <h4>통합유지보수 후</h4>
+            </li>
+            <li><img src="assets/images/solutions/it-infra-after.png" alt=""></li>
+          </ul>
         </div>
+      </section>
     </div>
-    <footer>
-        <section class="sitemap wrapper">
-            <div>
-                <h3><a href="about.html">about</a></h3>
-                <ul>
-                    <li>Challenge & Passion</li>
-                    <li>CEO Greeting</li>
-                    <li>Organization</li>
-                    <li>Location</li>
-                </ul>
-            </div>
-            <div>
-                <h3><a href="solutions-iiot.html">solution</a></h3>
-                <ul>
-                    <li>Smart IIoT Solution</li>
-                    <li>Remote Control System</li>
-                    <li>Smart Factory Automation</li>
-                    <li>Digital Transformation</li>
-                </ul>
-            </div>
-            <div>
-                <h3><a href="services.html">services</a></h3>
-                <ul>
-                    <li>System Integration</li>
-                    <li>System Consulting</li>
-                </ul>
-            </div>
-            <div>
-                <h3><a href="support.html">support</a></h3>
-            </div>
-        </section>
-        <section class="information wrapper">
-            <div>
-                <address>경기도 용인시 수지구 광교중앙로 338, C동 802호(상현동, 광교우미뉴브) ㈜제이엠소프트</address>
-                <ul>
-                    <li>tel: 031-308-5865</li>
-                    <li>fax: 031-624-5969</li>
-                    <li><a href="mailto:sales@jm-soft.co.kr">e-mail: sales@jm-soft.co.kr</a></li>
-                </ul>
-            </div>
-            <div class="copyright">Copyright © JM-SOFT Co., Ltd. All Rights Reserved.</div>
-        </section>
-    </footer>
-</main>
-<script type="text/javascript" src="assets/js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="assets/js/slick.min.js"></script>
-<script src='assets/js/imagesloaded.pkgd.min.js'></script>
-<script src="assets/js/script.js"></script>
+  </div>
+</div>
 <script>
-    $('.rcs-function').slick({
-        infinite: true,
-        speed: 500,
-        fade: true,
-        autoplay: true,
-        arrows: true,
-        dots: true,
-        cssEase: 'linear'
-    });
+  $('.rcs-function').slick({
+    infinite: true,
+    speed: 500,
+    fade: true,
+    autoplay: true,
+    arrows: true,
+    dots: true,
+    cssEase: 'linear'
+  });
 </script>
+
+    <footer>
+      <section class="sitemap wrapper">
+        <div>
+          <h3><a href="about.html">about</a></h3>
+          <ul>
+            <li>Challenge & Passion</li>
+            <li>CEO Greeting</li>
+            <li>Organization</li>
+            <li>Location</li>
+          </ul>
+        </div>
+        <div>
+          <h3><a href="solutions-iiot.html">solution</a></h3>
+          <ul>
+            <li>Smart IIoT Solution</li>
+            <li>Remote Control System</li>
+            <li>Smart Factory Automation</li>
+            <li>Digital Transformation</li>
+          </ul>
+        </div>
+        <div>
+          <h3><a href="services.html">services</a></h3>
+          <ul>
+            <li>System Integration</li>
+            <li>System Consulting</li>
+          </ul>
+        </div>
+        <div>
+          <h3><a href="support.html">support</a></h3>
+        </div>
+      </section>
+      <section class="information wrapper">
+        <div>
+          <address>경기도 용인시 수지구 광교중앙로 338, C동 802호(상현동, 광교우미뉴브) ㈜제이엠소프트</address>
+          <ul>
+            <li>tel: 031-308-5865</li>
+            <li>fax: 031-624-5969</li>
+            <li><a href="mailto:sales@jm-soft.co.kr">e-mail: sales@jm-soft.co.kr</a></li>
+          </ul>
+        </div>
+        <div class="copyright">Copyright © JM-SOFT Co., Ltd. All Rights Reserved.</div>
+      </section>
+    </footer>
+    <button class="scroll-to-top">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" />
+      </svg>
+    </button>
+  </main>
+  <script src="assets/js/script.js"></script>
 </body>
+
 </html>
